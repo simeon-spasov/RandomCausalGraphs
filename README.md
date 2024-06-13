@@ -138,4 +138,3 @@ Using the same seed in the fitness function ensures that the same indices (paren
 𝜃 will be the same for repeated runs, ensuring that the computed fitness values are reproducible.
 
 By setting the seed parameter consistently, you can ensure the repeatability of your experiments, making your simulations and results reliable and reproducible.
-
