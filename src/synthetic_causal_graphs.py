@@ -72,7 +72,7 @@ class CausalGraph:
         elif self.graph_type == 'SF':
             # Barabasi-Albert graph with preferential attachment
             # Each newly added node is attached to m existing nodes. If we start with m nodes, we get E=m(n-m) edges.
-            # We can calculate the edge probability in any graph as p = e*E/(n*(n-1)), where E is number of edges.
+            # We can calculate the edge probability in any graph as p = 2*E/(n*(n-1)), where E is number of edges.
             # It is just the edges E divided by the total possible number of edges given by n*(n-1)/2.
             # We substitute E from BA model and get m ~ p*n/2 for n>>m.
             m = round(self.p * self.n_nodes / 2)

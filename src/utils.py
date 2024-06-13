@@ -50,7 +50,7 @@ def plot_bayesian_network(bayesian_network: BayesianNetwork) -> None:
 
 
 def fitness(samples: np.ndarray, noise_std: float, proportion: float, seed: int = None,
-                      strategy: str = "midpoint") -> tuple:
+            strategy: str = "midpoint") -> tuple:
     """
     Calculate the fitness of each sample by computing the weighted mean of selected variables and adding Gaussian noise.
     The selection of variables can be based on a specified strategy: 'midpoint' or 'last_few'.
