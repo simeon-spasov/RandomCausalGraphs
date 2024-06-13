@@ -85,11 +85,6 @@ class CausalGraph:
 
         DAG = add_edges_to_ensure_acyclic(G)
 
-        # Generate a random permutation of the nodes
-        # shuffled_nodes = np.random.permutation(DAG.nodes)
-        # mapping = {old: new for old, new in zip(DAG.nodes, shuffled_nodes)}
-        # DAG = nx.relabel_nodes(DAG, mapping)
-
         assert nx.is_directed_acyclic_graph(DAG), "The graph is not a directed acyclic graph (DAG)."
         assert nx.is_weakly_connected(DAG), "The graph is not weakly connected. Try creating another instance again." \
                                             "A directed graph is weakly connected if, and only if, the graph is " \
