@@ -61,13 +61,7 @@ To simulate data under an intervention (e.g., setting a node to a fixed value):
 X_intervened = graph.simulate_sem(n_samples=500, intervened_node=10, intervened_value=0)
 ```
 
-#### Fitness function
-Allows you to generate an outcome `Y` from the samples. The fitness function applies a sparse mask to the columns of 
-the input samples only retaining a `proportion` of the nodes as parents of the outcome `Y`. The sparse mask can be generated
-using one of two strategies: `midpoint` or `last_few` depending on whether you want the parents to be around the middle or end of the topological order of nodes.
-The outcome is generated as:
-
-#### Fitness Function
+### Fitness Function
 
 The fitness function allows you to calculate an outcome `Y` from the samples by computing the weighted mean of selected variables and adding Gaussian noise. The selection of variables is based on a specified strategy, either `midpoint` or `last_few`. 
 
