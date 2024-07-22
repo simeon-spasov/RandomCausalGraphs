@@ -2,6 +2,8 @@
 
 Welcome to the RandomCausalGraphs repository! This guide will introduce you to the functionalities of the `CausalGraph` class, which is designed for creating synthetic causal graphs and simulating both observational and interventional data using various structural equation models (SEMs).
 
+**Check out [this blog post](https://simeon-spasov.github.io/posts/2024/07/a-causal-graph-data-generator/) for a deeper explanation of this package!** 
+
 ## Overview
 
 `CausalGraph` is a Python class that allows users to generate random Directed Acyclic Graphs (DAGs) based on specified parameters. It supports various graph generation methods and SEM types, making it versatile for simulating complex causal structures in computational experiments.
@@ -77,17 +79,17 @@ where:
 - \( θ \) is the vector of weights for the selected variables.
 - \( noise \) is Gaussian noise added to the weighted sum.
 
-### Sampling Strategies
+#### Sampling Strategies
 
 The possible strategies used to sample the parent nodes (variables) are:
 1. **Midpoint**: Selects variables around the midpoint of the total number of nodes.
 2. **Last Few**: Selects variables from the last few nodes.
 
-### Weight Generation
+#### Weight Generation
 
 The weights θ are sampled from a disjoint uniform distribution with default values ([-2.0, -0.5]) and ([0.5, 2.0]).
 
-### Example Usage
+#### Example Usage
 
 Here is an example of how to use the `fitness` function:
 
